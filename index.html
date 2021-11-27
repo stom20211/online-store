@@ -16,13 +16,8 @@
 
 
 
-<p style="background-color: orange;"> Welcome to Tom's store! We deliver fruits to your place.
-     We provide fresh and good fruits to your house. We offer fruits in the cheapest cost. 
-     When you order fruits from our store, we deliver them in 30 minutes. 
-     If we do not deliver in time, you will get fruits for free. 
-    You can pay in cash or online. If the fruits are bad, you will get your money back.
-
-
+<p style="background-color: orange;"> 
+    Welcome to Tom's online store! We deliver fruits to your place. We provide fresh and good fruits to your house. We offer fruits in the cheapest cost. When you order fruits from our store, we deliver them in 30 minutes. If we do not deliver in time, you will get fruits for free. You can pay in cash or online. If the fruits are bad, you will get your money back.
 </p>
 
 <hr>
@@ -34,19 +29,19 @@
     <li><a href ="mango.html" target="blank"> Mango</a>
 </ul>
 
-<h4> learning Resources</h4>
+<h4> Useful Resources</h4>
 <ol>
     <li><a href ="https://www.w3schools.com/html/default.asp" target="blank"> W3School</a>
     <li><a href="http://google.com/">Google</a><br>
     <li><a href="http://facebook.com/">Facebook</a><br> 
 
 </ol>
-<h4>Quizzes</h4>
+<h4>English Grammar Practice Quizzes</h4>
 <ol>
-    <li><a href ="https://rssw2019.github.io/Phrasal-Verbs/" target="blank"> Phrasal Verb Quiz</a>
-        <li><a href="https://rssw2019.github.io/Irregular-Verbs-V2/">Irregular verb v2 Quiz</a> <br>
-        <li><a href="https://rssw2019.github.io/Irreglar-Verbs-V3/">Irregular Verb V3 Quiz</a><br>
-        <li><a href="https://rssw2019.github.io/Prepositions/">Preposition Quiz</a><br>
+    <li><a href ="https://rssw2019.github.io/Phrasal-Verbs/" target="blank"> Phrasal Verbs</a>
+        <li><a href="https://rssw2019.github.io/Irregular-Verbs-V2/">Irregular Verbs v2</a> <br>
+        <li><a href="https://rssw2019.github.io/Irreglar-Verbs-V3/">Irregular Verbs V3</a><br>
+        <li><a href="https://rssw2019.github.io/Prepositions/">Prepositions</a><br>
         
       
 </ol>
@@ -83,17 +78,16 @@
     let message2="Good Afternoon!";
     let message3="Good Evening!";
     if(currentHour<13){
-        document.getElementById("myid").innerHTML = `Hello, ${message1} The current time is ${currentHour}:${currentMinute}:${currentSecond}`;
+        document.getElementById("myid").innerHTML = `${message1} The current time is ${currentHour}:${currentMinute}:${currentSecond} AM.`;
     }
     else if(currentHour<18){
-        document.getElementById("myid").innerHTML = `Hello, ${message2} The current time is ${currentHour}:${currentMinute}:${currentSecond}`;  
+        document.getElementById("myid").innerHTML = `${message2} The current time is ${24-currentHour}:${currentMinute}:${currentSecond} PM.`;  
     }
     else{
-        document.getElementById("myid").innerHTML = `Hello, ${message3} The current time is ${currentHour}:${currentMinute}:${currentSecond}`;
+        document.getElementById("myid").innerHTML = `${message3} The current time is ${24-currentHour}:${currentMinute}:${currentSecond} PM.`;
     }
     
 </script>
 </bodY>
-
 
 </html>
