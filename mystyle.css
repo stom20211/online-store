@@ -1,0 +1,16 @@
+body{
+    background-color:lightblue;
+    margin: 50px;
+}
+p{
+    color:blue;
+}
+ul{
+    color: red;
+}
+a{  
+    color: green;
+}
+h1{
+    color: red;
+}

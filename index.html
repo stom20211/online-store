@@ -1,35 +1,19 @@
 <html>
 <head>
-<title> Tom's Online Store
-</title>
-
-<style>
-body{
-    background-color:lightblue;
-    margin: 35px;
-}
-p{
-    color:blue;
-}
-ul{
-    color: red;
-}
-a{  `   
-    color: green;
-}
-h1{
-    color: red;
-}
-</style>
+<title> Tom's Online Store </title>
+<link rel="stylesheet" href="mystyle.css">
+<script src="myscripts.js"> </script>
+    
 </head>
 
 <body>
 <p style="text-align: right">
     
-    <img src="Fruits.jpg" width="100px" alt="Fruits">
+    <img src="Fruits.jpg" width="100%" height="100"alt="Fruits">
 </p>
    
-<h1> Hello</h1>
+<h4 id ="myid"> </h4>
+
 
 
 <p style="background-color: orange;"> Welcome to Tom's store! We deliver fruits to your place.
@@ -62,6 +46,7 @@ h1{
     <li><a href ="https://rssw2019.github.io/Phrasal-Verbs/" target="blank"> Phrasal Verb Quiz</a>
         <li><a href="https://rssw2019.github.io/Irregular-Verbs-V2/">Irregular verb v2 Quiz</a> <br>
         <li><a href="https://rssw2019.github.io/Irreglar-Verbs-V3/">Irregular Verb V3 Quiz</a><br>
+        <li><a href="https://rssw2019.github.io/Prepositions/">Preposition Quiz</a><br>
         
       
 </ol>
@@ -85,9 +70,29 @@ h1{
 </tr>
 </table>
 <hr>
-<a href ="https://stom20211.github.io/online-store/" target="blank"> Home</a>   
+<a href ="https://stom20211.github.io/online-store/" target="blank"> Home |</a>   
+<a href ="https://stom20211.github.io/online-store/" target="blank"> Hanro Patro |</a>
+<a href ="https://www.merokirana.com/#" target="blank"> Mero Kinara Pasal |</a>
 
-
+<script>
+    let currentTime=new Date();
+    let currentHour=currentTime.getHours();
+    let currentMinute=currentTime.getMinutes();
+    let currentSecond=currentTime.getSeconds();
+    let message1="Good Morning!";
+    let message2="Good Afternoon!";
+    let message3="Good Evening!";
+    if(currentHour<13){
+        document.getElementById("myid").innerHTML = `Hello, ${message1} The current time is ${currentHour}:${currentMinute}:${currentSecond}`;
+    }
+    else if(currentHour<18){
+        document.getElementById("myid").innerHTML = `Hello, ${message2} The current time is ${currentHour}:${currentMinute}:${currentSecond}`;  
+    }
+    else{
+        document.getElementById("myid").innerHTML = `Hello, ${message3} The current time is ${currentHour}:${currentMinute}:${currentSecond}`;
+    }
+    
+</script>
 </bodY>
 
 
