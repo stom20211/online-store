@@ -2,7 +2,7 @@
 <head>
 <title> Tom's Online Store </title>
 <link rel="stylesheet" href="mystyle.css">
-<script src="myscripts.js"> </script>
+
     
 </head>
 
@@ -23,11 +23,25 @@
 <hr>
 
 <h4>My Fruit List</h4>
-<ul>
-    <li><a href ="apple.html" target="blank"> Apple</a>
-    <li><a href ="orange.html" target="blank"> Orange</a>
-    <li><a href ="mango.html" target="blank"> Mango</a>
-</ul>
+<table>
+    <tr>
+        <td>
+            <a href ="apple.html" target="blank"> <img src="apple.jpeg" width="100" height="100"><br>Apple</a>
+        </td>
+        <td>
+            <a href ="orange.html" target="blank"> <img src="orange.jpeg" width="100" height="100"><br>Orange</a>
+        </td>
+        <td>
+            <a href ="mango.html" target="blank"> <img src="mango.jpeg" width="100" height="100"><br>Mango</a>
+        </td>
+        <td>
+            <a href ="banana.html" target="blank"> <img src="banana.jpeg" width="100" height="100"><br>Banana</a>
+        </td>
+
+    </tr>
+
+</table>
+ 
 
 <h4> Useful Resources</h4>
 <ol>
@@ -69,25 +83,8 @@
 <a href ="https://stom20211.github.io/online-store/" target="blank"> Hanro Patro |</a>
 <a href ="https://www.merokirana.com/#" target="blank"> Mero Kinara Pasal |</a>
 
-<script>
-    let currentTime=new Date();
-    let currentHour=currentTime.getHours();
-    let currentMinute=currentTime.getMinutes();
-    let currentSecond=currentTime.getSeconds();
-    let message1="Good Morning!";
-    let message2="Good Afternoon!";
-    let message3="Good Evening!";
-    if(currentHour<13){
-        document.getElementById("myid").innerHTML = `${message1} The current time is ${currentHour}:${currentMinute}:${currentSecond} AM.`;
-    }
-    else if(currentHour<18){
-        document.getElementById("myid").innerHTML = `${message2} The current time is ${24-currentHour}:${currentMinute}:${currentSecond} PM.`;  
-    }
-    else{
-        document.getElementById("myid").innerHTML = `${message3} The current time is ${24-currentHour}:${currentMinute}:${currentSecond} PM.`;
-    }
-    
-</script>
+<script src="myscripts.js"> </script>
 </bodY>
+
 
 </html>
