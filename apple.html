@@ -6,8 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple</title>
 </head>
-<body>
-   <p>Apples are sweet.
-</p>     
+<body onload="getLocation()">
+    <p id ="greeting"> <p>
+   <h4>Today's Apple Prices and Locations
+   </h4>   
+<table border="1" style="background-color: pink;">
+    <tr>
+        <td> Store</td>
+        <td> Price per KG</td>
+        <td> Distance From Your Location</td>
+        <td> Purchase</td>
+    </tr>
+    <tr>
+    <td>Indrachok Apple Store</td>
+    <td> Rs. 240</td>
+    <td><p id="tom_distance"></button></p> </td>
+    <td> Order Online</td>
+</tr>
+<tr>
+    <td>Atlanta Apple Store</td>
+    <td>Rs. 150</td>
+    <td><p id="sam_distance"></button></p> </td>
+    <td> Order Online</td>
+</tr>
+</table>  
+
+<script src="myscripts.js"></script>
+
+<script>
+    var tom_store= document.getElementById("tom_distance");
+    var sam_store= document.getElementById("sam_distance");
+    
+    
+    
+     
+    // Distance Between two points on Earth
+     
+        function distance(lat1,
+                         lat2, lon1, lon2)
+        {
+       
+            // named toRadians which converts from
+            // degrees to radians.
+            lon1 =  lon1 * Math.PI / 180;
+            lon2 = lon2 * Math.PI / 180;
+            lat1 = lat1 * Math.PI / 180;
+            lat2 = lat2 * Math.PI / 180;
+       
+            // Haversine formula
+            let dlon = lon2 - lon1;
+            let dlat = lat2 - lat1;
+            let a = Math.pow(Math.sin(dlat / 2), 2)
+                     + Math.cos(lat1) * Math.cos(lat2)
+                     * Math.pow(Math.sin(dlon / 2),2);
+                   
+            let c = 2 * Math.asin(Math.sqrt(a));
+       
+            // Radius of earth =6378 kilometers=3956 miles
+            let r = 6371;
+            //let r=3956;
+       
+            // calculate the result
+            return (c * r);
+        }
+     
+    // Driver code  
+    
+    
+            //location of the destination 
+            //Tom's Store
+            let tom_lat = 27.706053512340716;
+            let tom_lon = 85.30945344000493;
+
+            //Sam's Location
+            let sam_lat = 33.76008402112574;
+            let sam_lon= -84.39602420628964;
+
+            function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+            }
+            
+            function showPosition(position) { 
+                //user's location
+                let user_lat=position.coords.latitude;
+                let user_lon=position.coords.longitude; 
+                tom_store.innerHTML =Math.ceil(distance(tom_lat, user_lat, tom_lon, user_lon)) + " KM";
+                sam_store.innerHTML =Math.ceil(distance(sam_lat, user_lat, sam_lon, user_lon)) + " KM";
+                
+            }
+    </script>
 </body>
 </html>

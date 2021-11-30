@@ -9,12 +9,12 @@ function timeFunction(){
     let message2="Good Afternoon!";
     let message3="Good Evening!";
     if(currentHour<13){
-        document.getElementById("myid").innerHTML = `${message1} The current time is ${currentHour}:${currentMinute}:${currentSecond} AM.`;
+        document.getElementById("greeting").innerHTML = `${message1} The current time is ${currentHour}:${currentMinute}:${currentSecond} AM.`;
     }
     else if(currentHour<18){
-        document.getElementById("myid").innerHTML = `${message2} The current time is ${currentHour-12}:${currentMinute}:${currentSecond} PM.`;  
+        document.getElementById("greeting").innerHTML = `${message2} The current time is ${currentHour-12}:${currentMinute}:${currentSecond} PM.`;  
     }
     else{
-        document.getElementById("myid").innerHTML = `${message3} The current time is ${currentHour-12}:${currentMinute}:${currentSecond} PM.`;
+        document.getElementById("greeting").innerHTML = `${message3} The current time is ${currentHour-12}:${currentMinute}:${currentSecond} PM.`;
     }
 }
